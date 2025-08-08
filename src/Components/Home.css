@@ -12,7 +12,8 @@
   justify-content: center;
   text-align: center;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  padding-top: 80px; /* To account for fixed navbar */
+  padding-top: 80px;
+  /* To account for fixed navbar */
 }
 
 .hero-content {
@@ -43,7 +44,8 @@
   gap: 20px;
 }
 
-.primary-button, .secondary-button {
+.primary-button,
+.secondary-button {
   padding: 12px 30px;
   border-radius: 25px;
   font-size: 1rem;
@@ -81,19 +83,206 @@
   .hero-title {
     font-size: 2.2rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.2rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
-  
-  .primary-button, .secondary-button {
+
+  .primary-button,
+  .secondary-button {
     width: 80%;
+    max-width: 250px;
+  }
+}
+
+
+
+/* infomation section */
+
+
+
+
+.loan-advice-section {
+  padding: 5rem 2rem;
+  background-color: #f9fbfd;
+  color: #2c3e50;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a365d;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #718096;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Tabs Styling */
+.loan-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  background-color: #e2e8f0;
+  color: #4a5568;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background-color: #cbd5e0;
+}
+
+.tab-btn.active {
+  background-color: #3182ce;
+  color: white;
+}
+
+/* Content Styling */
+.tab-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.advice-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.advice-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.advice-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #2b6cb0;
+}
+
+.advice-card ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.advice-card li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.benefits {
+  background-color: #ebf8ff;
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.benefits h4 {
+  margin-bottom: 0.8rem;
+  color: #2b6cb0;
+}
+
+.benefits p {
+  margin-bottom: 0.5rem;
+}
+
+.advice-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Styling */
+.loan-calculator-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.loan-calculator-cta h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2b6cb0;
+}
+
+.loan-calculator-cta p {
+  margin-bottom: 1.5rem;
+  color: #4a5568;
+}
+
+.cta-button {
+  padding: 0.8rem 2.5rem;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2c5282;
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .advice-content {
+    grid-template-columns: 1fr;
+  }
+
+  .advice-image {
+    order: -1;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loan-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-btn {
+    width: 100%;
     max-width: 250px;
   }
 }

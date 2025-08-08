@@ -12,7 +12,6 @@ const Home = () => {
         <div className="hero-content">
           <h1 className="hero-title">
             Innovative Solutions from <span>Advice Kuber Shatu</span>
-            testing
           </h1>
           <p className="hero-subtitle">
             We deliver cutting-edge services tailored to your business needs

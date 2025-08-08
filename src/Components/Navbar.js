@@ -57,6 +57,11 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
+               <li className="nav-item">
+            <Link to="/contact" className="nav-links" onClick={() => setIsOpen(false)}>
+              Contact
+            </Link>
+          </li>
           <li className="nav-item cta">
             <Link to="/get-started" className="nav-links cta-button" onClick={() => setIsOpen(false)}>
               Get Started

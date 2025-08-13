@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FiMail, FiPhone, FiMapPin, FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import './Home.css';
 
@@ -83,7 +85,8 @@ const Home = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="hero-section">
+      <section className="hero-section ">
+        <div className='overlay'> </div>
         <div className="hero-content">
           <h1 className="hero-title">
             Innovative Solutions from <span>Advice Kuber Shatu</span>
@@ -137,10 +140,117 @@ const Home = () => {
         <div className="loan-calculator-cta">
           <h3>Not sure what you need?</h3>
           <p>Try our loan calculator to find the best option for you</p>
-          <button className="cta-button">Use Loan Calculator</button>
+          <Link to="/EMICalculator " style={{ color: "white", textDecoration: "none" }}>
+            <button className="cta-button">Open Calculator</button>
+          </Link>
         </div>
       </section>
+
+      <section className="why-consultic-section">
+        <div className="container">
+          <h2 className="section-title">
+            Why <span>Consultic advisor</span> is best ?
+          </h2>
+          <p className="section-subtitle">
+            Sorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+            turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+          </p>
+
+          <div className="stats-grid">
+            <div className="stat-card">
+              <h3 className="stat-number">1754</h3>
+              <p className="stat-label">Number of families</p>
+            </div>
+            <div className="stat-card">
+              <h3 className="stat-number">₹1754</h3>
+              <p className="stat-label">Assets Managed</p>
+            </div>
+            <div className="stat-card">
+              <h3 className="stat-number">26</h3>
+              <p className="stat-label">Full Time Advisors</p>
+            </div>
+            <div className="stat-card">
+              <h3 className="stat-number">40</h3>
+              <p className="stat-label">Employees</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* foooter section  */}
+
+      <footer className="modern-footer">
+        <div className="footer-top">
+          <div className="footer-cta">
+            <h2>Let us help you <span>Plan your future</span></h2>
+            <p>
+              Sorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+              turpis molestie, dictum est a, mattis tellus.
+            </p>
+            <button className="cta-button">
+              Subscribe Now <span>&rarr;</span>
+            </button>
+          </div>
+
+          <div className="footer-grid">
+            <div className="footer-col">
+              <h3>Financer</h3>
+              <p className="footer-about">
+                Advise Kubar Shatu provides comprehensive financial planning services to help you achieve your goals.
+              </p>
+              <div className="social-links">
+                <a href="#"><FiFacebook /></a>
+                <a href="#"><FiTwitter /></a>
+                <a href="#"><FiInstagram /></a>
+                <a href="#"><FiLinkedin /></a>
+              </div>
+            </div>
+
+            <div className="footer-col">
+              <h3>Our Company</h3>
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">User Terms</a></li>
+                <li><a href="#">Help Centre</a></li>
+              </ul>
+            </div>
+
+            <div className="footer-col">
+              <h3>Contact</h3>
+              <ul className="contact-info">
+                <li><FiPhone /> +91 22048919</li>
+                <li><FiMail /> info@advisekubarshatu.com</li>
+                <li><FiMail /> support@advisekubarshatu.com</li>
+                <li><FiMapPin /> Jindal Chowk 1121, Hisar, Haryana</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Advise Kubar Shatu. All rights reserved.</p>
+          <div className="footer-links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </footer>
+
+
+
+
     </div>
+
+
+
+
+
+
+
+
+
   );
 };
 
